@@ -1,12 +1,12 @@
 {
   "name": "generator-picantes-react",
-  "version": "0.0.0",
-  "description": "Generator of React components with styles stories and test",
-  "homepage": "",
+  "version": "0.0.1",
+  "description": "Opinionated Generator of React components with styles stories and test",
+  "homepage": "https://github.com/msaglietto/generator-picantes-react",
   "author": {
     "name": "Mauricio Saglietto",
     "email": "msaglietto@gmail.com",
-    "url": ""
+    "url": "https://github.com/msaglietto"
   },
   "files": [
     "generators"
@@ -14,7 +14,10 @@
   "main": "generators/index.js",
   "keywords": [
     "yeoman-generator",
-    "react"
+    "react",
+    "reactjs",
+    "scaffold",
+    "component",
   ],
   "dependencies": {
     "yeoman-generator": "^1.0.0",
@@ -42,7 +45,10 @@
       "mocha": true
     }
   },
-  "repository": "msaglietto/generator-picantes-react",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/msaglietto/generator-picantes-react.git"
+  },
   "scripts": {
     "prepublish": "gulp prepublish",
     "test": "gulp"

@@ -1,5 +1,5 @@
 # generator-picantes-react [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-> Generator of React components with styles stories and test
+> Opinionated generator of React components with styles stories and test
 
 ## Installation
 
@@ -10,11 +10,35 @@ npm install -g yo
 npm install -g generator-picantes-react
 ```
 
-Then generate your new project:
+## Usage
+
+Then generate your new react components:
 
 ```bash
-yo picantes-react
+yo picantes-react:component Name
 ```
+
+This will generate the following files:
+- `Component.js` Main component file
+- `Component.test.js` Jest simple snapshot test
+- `Component.stories.js` Storybook file
+- `index.js` Entry point to the component that could have an apollo wrapper 
+- `styles.scss` Stylesheet for the component 
+
+Options:
+
+- **nostyles** Do not generate styles.scss and dont wrap component with `isomorphic-style-loader`
+- **stateless** Generate a function component instead of a class
+
+## Development
+
+To test local modifications run 
+
+```bash
+npm link
+```
+
+So the generator points to the local version
 
 ## Getting To Know Yeoman
 
