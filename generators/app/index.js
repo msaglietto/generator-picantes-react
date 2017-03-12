@@ -10,27 +10,8 @@ module.exports = Generator.extend({
       'Welcome to the badass ' + chalk.red('generator-picantes-react') + ' generator!'
     ));
 
-    var prompts = [{
-      type: 'confirm',
-      name: 'someAnswer',
-      message: 'Would you like to enable this option?',
-      default: true
-    }];
-
-    return this.prompt(prompts).then(function (props) {
-      // To access props later use this.props.someAnswer;
-      this.props = props;
-    }.bind(this));
-  },
-
-  writing: function () {
-    this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
-    );
-  },
-
-  install: function () {
-    this.installDependencies();
+    this.log(yosay(
+      'Use as ' + chalk.green('yo picantes-react component name')
+    ));
   }
 });
