@@ -49,7 +49,6 @@ class ComponentGenerator extends Generator {
       message: 'Will the component use apollo graphQL queries?',
       default: this.options.useapollo
     }]).then(answers => {
-      console.log(answers);
       Object.assign(this.options, answers);
     });
   }
