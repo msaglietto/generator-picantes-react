@@ -1,10 +1,23 @@
 import React, { Components, PropTypes } from 'react';
 
-const propTypes = { };
-const defaultProps = { };
+const propTypes = {
 
+};
+
+const defaultProps = {
+
+};
+
+/**
+ * Component - Description
+ * @extends Components
+ */
 class Component extends Components {
 
+  /**
+   * Component - Description
+   * @extends Components
+   */
   render() {
     return (
       <div>
@@ -13,8 +26,8 @@ class Component extends Components {
   }
 }
 
-<%= componentName %>.displayName = '<%= componentName %>';
-<%= componentName %>.propTypes = propTypes;
-<%= componentName %>.defaultProps = defaultProps;
+Component.displayName = '<%= componentName %>';
+Component.propTypes = propTypes;
+Component.defaultProps = defaultProps;
 
 export default Component;

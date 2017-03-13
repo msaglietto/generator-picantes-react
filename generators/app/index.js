@@ -11,7 +11,7 @@ module.exports = Generator.extend({
     ));
 
     this.log(yosay(
-      'Use as ' + chalk.green('yo picantes-react component name')
+      'Use as ' + chalk.green('yo picantes-react:component name')
     ));
   }
 });

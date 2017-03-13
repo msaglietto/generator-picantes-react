@@ -6,12 +6,22 @@ import s from './styles.scss';
 const propTypes = {
 
 };
+
 const defaultProps = {
 
 };
 
+/**
+ * Component - Description
+ * @extends Components
+ */
 export class Component extends Components {
 
+  /**
+   * render - Description
+   *
+   * @returns {type} Description
+   */
   render() {
     return (
       <div>
@@ -20,8 +30,8 @@ export class Component extends Components {
   }
 }
 
-<%= componentName %>.displayName = '<%= componentName %>';
-<%= componentName %>.propTypes = propTypes;
-<%= componentName %>.defaultProps = defaultProps;
+Component.displayName = '<%= componentName %>';
+Component.propTypes = propTypes;
+Component.defaultProps = defaultProps;
 
 export default withStyles(s)(Component);
