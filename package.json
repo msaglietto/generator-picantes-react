@@ -17,7 +17,7 @@
     "react",
     "reactjs",
     "scaffold",
-    "component",
+    "component"
   ],
   "dependencies": {
     "yeoman-generator": "^1.0.0",

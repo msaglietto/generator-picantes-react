@@ -27,8 +27,10 @@ This will generate the following files:
 
 Options:
 
-- **nostyles** Do not generate styles.scss and dont wrap component with `isomorphic-style-loader`
-- **stateless** Generate a function component instead of a class
+- **nostyles** Do not generate styles.scss and dont wrap component with `isomorphic-style-loader` (default: true)
+- **stateless** Generate a function component instead of a class (default: true)
+- **useapollo** Generate a Apollo wrapper on index.js (default: false)
+- **quiet** Dont prompt (default: false)
 
 ## Development
 

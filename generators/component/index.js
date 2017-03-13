@@ -9,11 +9,16 @@ class ComponentGenerator extends Generator {
 
     this.option('stateless', {
       desc: 'Create a functional component instead of a class',
-      defaults: false
+      defaults: true
     });
 
     this.option('nostyles', {
       desc: 'Do not create a stylesheet for the component',
+      defaults: true
+    });
+
+    this.option('useapollo', {
+      desc: 'Create apollo wrapper on index.js',
       defaults: false
     });
 
@@ -27,6 +32,26 @@ class ComponentGenerator extends Generator {
     if (this.options.quiet) {
       return;
     }
+
+    return this.prompt([{
+      type: 'confirm',
+      name: 'stateless',
+      message: 'Would you like to create a stateless component?',
+      default: this.options.stateless
+    }, {
+      type: 'confirm',
+      name: 'nostyles',
+      message: 'Should we omit the stylesheet and isomorphic style wrapper?',
+      default: this.options.nostyles
+    }, {
+      type: 'confirm',
+      name: 'useapollo',
+      message: 'Will the component use apollo graphQL queries?',
+      default: this.options.useapollo
+    }]).then(answers => {
+      console.log(answers);
+      Object.assign(this.options, answers);
+    });
   }
 
   writing() {
