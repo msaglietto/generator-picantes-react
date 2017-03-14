@@ -1,4 +1,4 @@
-import React, { Components, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 
 const propTypes = {
 
@@ -12,7 +12,7 @@ const defaultProps = {
  * Component - Description
  * @extends Components
  */
-class Component extends Components {
+class Component extends React.Component {
 
   /**
    * Component - Description

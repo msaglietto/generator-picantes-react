@@ -1,4 +1,4 @@
-import React, { Components, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 
 import s from './styles.scss';
@@ -15,7 +15,7 @@ const defaultProps = {
  * Component - Description
  * @extends Components
  */
-export class Component extends Components {
+export class Component extends React.Component {
 
   /**
    * render - Description

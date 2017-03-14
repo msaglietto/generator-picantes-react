@@ -40,7 +40,7 @@ describe('generator-picantes-react:component', () => {
       .withArguments(['Test'])
       .withOptions({quiet: true, stateless: false})
       .then(() => {
-        assert.fileContent('Component.js', 'class Component extends Components');
+        assert.fileContent('Component.js', 'class Component extends React.Component');
       });
   });
 
@@ -67,7 +67,7 @@ describe('generator-picantes-react:component', () => {
         ]);
 
         assert.fileContent('Component.js', 'export default withStyles(s)(Component);');
-        assert.fileContent('Component.js', 'class Component extends Components');
+        assert.fileContent('Component.js', 'class Component extends React.Component');
         assert.fileContent('index.js', 'export default apollo');
       });
   });
