@@ -16,9 +16,9 @@ export const Component = props =>
     <%= componentName %>
   </div>;
 
-<%= componentName %>.propTypes = propTypes;
-<%= componentName %>.defaultProps = defaultProps;
-<%= componentName %>.displayName = '<%= componentName %>';
+Component.propTypes = propTypes;
+Component.defaultProps = defaultProps;
+Component.displayName = '<%= componentName %>';
 
 export default withStyles(s)(Component);
 
