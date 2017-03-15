@@ -10,10 +10,10 @@ describe('generator-picantes-react:component', () => {
       .withOptions({quiet: true})
       .then(() => {
         assert.file([
-          'index.js',
-          'Component.js',
-          'Component.test.js',
-          'Component.stories.js'
+          'Test/index.js',
+          'Test/Component.js',
+          'Test/Component.test.js',
+          'Test/Component.stories.js'
         ]);
       });
   });
@@ -24,14 +24,14 @@ describe('generator-picantes-react:component', () => {
       .withOptions({quiet: true, nostyles: false})
       .then(() => {
         assert.file([
-          'index.js',
-          'styles.scss',
-          'Component.js',
-          'Component.test.js',
-          'Component.stories.js'
+          'Test/index.js',
+          'Test/styles.scss',
+          'Test/Component.js',
+          'Test/Component.test.js',
+          'Test/Component.stories.js'
         ]);
 
-        assert.fileContent('Component.js', 'export default withStyles(s)(Component);');
+        assert.fileContent('Test/Component.js', 'export default withStyles(s)(Component);');
       });
   });
 
@@ -40,7 +40,7 @@ describe('generator-picantes-react:component', () => {
       .withArguments(['Test'])
       .withOptions({quiet: true, stateless: false})
       .then(() => {
-        assert.fileContent('Component.js', 'class Component extends React.Component');
+        assert.fileContent('Test/Component.js', 'class Component extends React.Component');
       });
   });
 
@@ -49,7 +49,7 @@ describe('generator-picantes-react:component', () => {
       .withArguments(['Test'])
       .withOptions({quiet: true, useapollo: true})
       .then(() => {
-        assert.fileContent('index.js', 'export default apollo');
+        assert.fileContent('Test/index.js', 'export default apollo');
       });
   });
 
@@ -59,16 +59,16 @@ describe('generator-picantes-react:component', () => {
       .withPrompts({stateless: false, nostyles: false, useapollo: true})
       .then(() => {
         assert.file([
-          'index.js',
-          'styles.scss',
-          'Component.js',
-          'Component.test.js',
-          'Component.stories.js'
+          'Test/index.js',
+          'Test/styles.scss',
+          'Test/Component.js',
+          'Test/Component.test.js',
+          'Test/Component.stories.js'
         ]);
 
-        assert.fileContent('Component.js', 'export default withStyles(s)(Component);');
-        assert.fileContent('Component.js', 'class Component extends React.Component');
-        assert.fileContent('index.js', 'export default apollo');
+        assert.fileContent('Test/Component.js', 'export default withStyles(s)(Component);');
+        assert.fileContent('Test/Component.js', 'class Component extends React.Component');
+        assert.fileContent('Test/index.js', 'export default apollo');
       });
   });
 });

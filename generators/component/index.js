@@ -60,36 +60,36 @@ class ComponentGenerator extends Generator {
       if (this.options.nostyles) {
         this.fs.copyTpl(
           this.templatePath('StatelessNoStyles.js'),
-          this.destinationPath('Component.js'),
+          this.destinationPath(`${this.options.componentName}/Component.js`),
           settings
         );
       } else {
         this.fs.copyTpl(
           this.templatePath('StatelessWithStyles.js'),
-          this.destinationPath('Component.js'),
+          this.destinationPath(`${this.options.componentName}/Component.js`),
           settings
         );
         this.fs.copyTpl(
           this.templatePath('styles.scss'),
-          this.destinationPath('styles.scss'),
+          this.destinationPath(`${this.options.componentName}/styles.scss`),
           settings
         );
       }
     } else if (this.options.nostyles) {
       this.fs.copyTpl(
         this.templatePath('ClassNoStyles.js'),
-        this.destinationPath('Component.js'),
+        this.destinationPath(`${this.options.componentName}/Component.js`),
         settings
       );
     } else {
       this.fs.copyTpl(
         this.templatePath('ClassWithStyles.js'),
-        this.destinationPath('Component.js'),
+        this.destinationPath(`${this.options.componentName}/Component.js`),
         settings
       );
       this.fs.copyTpl(
         this.templatePath('styles.scss'),
-        this.destinationPath('styles.scss'),
+        this.destinationPath(`${this.options.componentName}/styles.scss`),
         settings
       );
     }
@@ -97,26 +97,26 @@ class ComponentGenerator extends Generator {
     if (this.options.useapollo) {
       this.fs.copyTpl(
         this.templatePath('indexApollo.js'),
-        this.destinationPath('index.js'),
+        this.destinationPath(`${this.options.componentName}/index.js`),
         settings
       );
     } else {
       this.fs.copyTpl(
         this.templatePath('indexNoApollo.js'),
-        this.destinationPath('index.js'),
+        this.destinationPath(`${this.options.componentName}/index.js`),
         settings
       );
     }
 
     this.fs.copyTpl(
       this.templatePath('ComponentTest.js'),
-      this.destinationPath('Component.test.js'),
+      this.destinationPath(`${this.options.componentName}/Component.test.js`),
       settings
     );
 
     this.fs.copyTpl(
       this.templatePath('ComponentStories.js'),
-      this.destinationPath('Component.stories.js'),
+      this.destinationPath(`${this.options.componentName}/Component.stories.js`),
       settings
     );
   }
