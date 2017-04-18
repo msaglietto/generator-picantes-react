@@ -1,18 +1,29 @@
-import React, { PropTypes } from 'react';
-
-const propTypes = {
-
-};
-
-const defaultProps = {
-
-};
+import React from 'react';
+import PropTypes from 'prop-types';
 
 /**
  * Component - Description
- * @extends Components
+ * @extends Component
  */
 class Component extends React.Component {
+  /**
+   * @type {string}
+   */
+  static displayName = '<%= componentName %>';
+
+  /**
+   * @type {object}
+   */
+  static propTypes = {
+
+  };
+
+  /**
+   * @type {object}
+   */
+  static defaultProps = {
+
+  };
 
   /**
    * Component - Description
@@ -26,8 +37,6 @@ class Component extends React.Component {
   }
 }
 
-Component.displayName = '<%= componentName %>';
-Component.propTypes = propTypes;
-Component.defaultProps = defaultProps;
+Component.
 
 export default Component;
