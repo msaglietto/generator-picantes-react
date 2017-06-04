@@ -1,6 +1,6 @@
 {
   "name": "generator-picantes-react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Opinionated Generator of React components with styles stories and test",
   "homepage": "https://github.com/msaglietto/generator-picantes-react",
   "author": {
