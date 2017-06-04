@@ -4,24 +4,35 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 
 import s from './styles.scss';
 
-const propTypes = {
-
-};
-
-const defaultProps = {
-
-};
-
 /**
  * Component - Description
+ *
  * @extends Component
  */
-export class Component extends React.Component {
+class Component extends React.Component {
+  /**
+   * @type {string}
+   */
+  static displayName = '<%= componentName %>';
 
   /**
-   * render - Description
+   * @type {object}
+   */
+  static propTypes = {
+
+  };
+
+  /**
+   * @type {object}
+   */
+  static defaultProps = {
+
+  };
+
+  /**
+   * render - React component render
    *
-   * @returns {type} Description
+   * @returns {node} React Node
    */
   render() {
     return (
@@ -30,9 +41,5 @@ export class Component extends React.Component {
     );
   }
 }
-
-Component.displayName = '<%= componentName %>';
-Component.propTypes = propTypes;
-Component.defaultProps = defaultProps;
 
 export default withStyles(s)(Component);

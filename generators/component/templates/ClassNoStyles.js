@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 /**
  * Component - Description
+ *
  * @extends Component
  */
 class Component extends React.Component {
@@ -26,8 +27,9 @@ class Component extends React.Component {
   };
 
   /**
-   * Component - Description
-   * @extends Components
+   * render - React component render
+   *
+   * @returns {node} React Node
    */
   render() {
     return (
@@ -36,7 +38,5 @@ class Component extends React.Component {
     );
   }
 }
-
-Component.
 
 export default Component;
