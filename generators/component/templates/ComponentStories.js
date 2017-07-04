@@ -12,7 +12,6 @@ storiesOf('<%= componentName %>', module)
       </div>
     </Isomorphic>
   ))
-  .add('Basic', () =>
+  .add('Basic', () => (
     <<%= componentName %> />,
-  );
-
+  ));

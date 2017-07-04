@@ -12,10 +12,11 @@ const defaultProps = {
 
 };
 
-export const Component = props =>
+export const Component = props => (
   <div>
     <%= componentName %>
-  </div>;
+  </div>
+);
 
 Component.propTypes = propTypes;
 Component.defaultProps = defaultProps;
